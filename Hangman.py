@@ -38,3 +38,7 @@ window_width = math.floor(screen_width * 0.8)
 window_height = math.floor(screen_height * 0.8)
 window_x = math.floor((screen_width - window_width) / 2)
 window_y = math.floor((screen_height - window_height) / 2)
+
+window.geometry(f"{window_width}x{window_height}+{window_x}+{window_y}")
+
+window.mainloop()
