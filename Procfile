@@ -1,1 +1,1 @@
-web: xvfb-run python Hangman.py
+web: python Hangman.py.py
