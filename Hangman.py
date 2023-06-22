@@ -17,6 +17,9 @@ def start_game():
 
         window.title(f"Hangman Game - {username}")
 
+    else:
+        message_label.config(text="Please enter your name.")
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
