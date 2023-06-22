@@ -81,6 +81,15 @@ def end_game():
     game_over_window.geometry(f"{window_width}x{window_height}+{window_x}+{window_y}")
     game_over_window.mainloop()
 
+
+def restart_game():
+    initialize_game()
+    window.deiconify()
+
+    # Clear previous game state
+    guess_entry.delete(0, tk.END)
+    message_label.config(text="")
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
