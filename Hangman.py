@@ -22,7 +22,9 @@ def start_game():
 
 def initialize_game():
     global guess_word, remaining_attempts, guessed_letters
-
+    guess_word = random.choice(words)
+    remaining_attempts = 6
+    guessed_letters = set()
 
 # GUI
 window = tk.Tk()
