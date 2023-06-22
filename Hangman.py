@@ -15,6 +15,7 @@ def start_game():
         username_entry.pack_forget()
         start_button.pack_forget()
 
+        initialize_game()
         window.title(f"Hangman Game - {username}")
 
     else:
@@ -25,6 +26,10 @@ def initialize_game():
     guess_word = random.choice(words)
     remaining_attempts = 6
     guessed_letters = set()
+
+def update_word_display():
+    masked_word = ' '.join([letter if letter in guessed_letters else '_' for letter in guess_word])
+    word_label.config(text=masked_word)
 
 # GUI
 window = tk.Tk()
