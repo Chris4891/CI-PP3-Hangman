@@ -7,6 +7,8 @@ def load_words_from_txt_file():
         words = file.read().splitlines()
     return words    
 
+def start_game():
+    username = username_entry.get()
 
 # GUI
 window = tk.Tk()
