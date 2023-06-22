@@ -26,10 +26,16 @@ def initialize_game():
     guess_word = random.choice(words)
     remaining_attempts = 6
     guessed_letters = set()
+    update_word_display()
+    update_image()
 
 def update_word_display():
     masked_word = ' '.join([letter if letter in guessed_letters else '_' for letter in guess_word])
     word_label.config(text=masked_word)
+
+def update_image():
+    image_path = f'img/hangman{6 - remaining_attempts}.png'
+    hangman_image.config(file=image_path)
 
 # GUI
 window = tk.Tk()
