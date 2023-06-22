@@ -37,6 +37,31 @@ def update_image():
     image_path = f'img/hangman{6 - remaining_attempts}.png'
     hangman_image.config(file=image_path)
 
+def process_guess():
+    global remaining_attempts
+
+    guess = guess_entry.get().lower()
+    guess_entry.delete(0, tk.END)
+
+    if guess.isalpha() and len(guess) == 1:
+        if guess in guessed_letters:
+            message_label.config(text="You've already guessed that letter.")
+        elif guess in guess_word:
+            guessed_letters.add(guess)
+            update_word_display()
+
+            if all(letter in guessed_letters for letter in guess_word):
+                message_label.config(text="Congratulations! You guessed the word!")
+        else:
+            remaining_attempts -= 1
+            update_image()
+
+            if remaining_attempts == 0:
+                message_label.config(text="game ended")
+
+    else:
+        message_label.config(text="Please enter a single letter.")
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
