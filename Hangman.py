@@ -23,3 +23,6 @@ username_entry.pack()
 start_button = tk.Button(window, text="Start Game", command=start_game, font=('Arial', 16), bg="white")
 start_button.pack(pady=20)
 
+hangman_image = tk.PhotoImage(file="img/hangman0.png")
+hangman_label = tk.Label(window, image=hangman_image, bg="white")
+
