@@ -31,3 +31,10 @@ guess_label = tk.Label(window, text="Guess a letter:", font=('Arial', 18), bg="w
 guess_entry = tk.Entry(window, font=('Arial', 24))
 guess_button = tk.Button(window, text="Guess", command=process_guess, font=('Arial', 16), bg="white")
 message_label = tk.Label(window, font=('Arial', 18), bg="white")
+
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+window_width = math.floor(screen_width * 0.8)
+window_height = math.floor(screen_height * 0.8)
+window_x = math.floor((screen_width - window_width) / 2)
+window_y = math.floor((screen_height - window_height) / 2)
