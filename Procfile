@@ -1,1 +1,1 @@
-web: python Hangman.py.py
+web: python Hangman.py
