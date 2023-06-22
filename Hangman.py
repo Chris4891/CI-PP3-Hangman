@@ -20,6 +20,10 @@ def start_game():
     else:
         message_label.config(text="Please enter your name.")
 
+def initialize_game():
+    global guess_word, remaining_attempts, guessed_letters
+
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
