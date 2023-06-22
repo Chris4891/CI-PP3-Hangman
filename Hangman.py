@@ -26,3 +26,8 @@ start_button.pack(pady=20)
 hangman_image = tk.PhotoImage(file="img/hangman0.png")
 hangman_label = tk.Label(window, image=hangman_image, bg="white")
 
+word_label = tk.Label(window, font=('Arial', 24), bg="white")
+guess_label = tk.Label(window, text="Guess a letter:", font=('Arial', 18), bg="white")
+guess_entry = tk.Entry(window, font=('Arial', 24))
+guess_button = tk.Button(window, text="Guess", command=process_guess, font=('Arial', 16), bg="white")
+message_label = tk.Label(window, font=('Arial', 18), bg="white")
