@@ -10,6 +10,13 @@ def load_words_from_txt_file():
 def start_game():
     username = username_entry.get()
 
+    if username:
+        username_label.pack_forget()
+        username_entry.pack_forget()
+        start_button.pack_forget()
+
+        window.title(f"Hangman Game - {username}")
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
