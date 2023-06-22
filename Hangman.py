@@ -11,3 +11,5 @@ def load_words_from_txt_file():
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
+
+window.configure(bg="white")
