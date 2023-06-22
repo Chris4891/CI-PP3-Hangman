@@ -17,6 +17,12 @@ def start_game():
 
         initialize_game()
         window.title(f"Hangman Game - {username}")
+        hangman_label.pack()
+        word_label.pack()
+        guess_label.pack()
+        guess_entry.pack()
+        guess_button.pack()
+        message_label.pack()
 
     else:
         message_label.config(text="Please enter your name.")
@@ -57,8 +63,7 @@ def process_guess():
             update_image()
 
             if remaining_attempts == 0:
-                message_label.config(text="game ended")
-
+                end_game()
     else:
         message_label.config(text="Please enter a single letter.")
 
