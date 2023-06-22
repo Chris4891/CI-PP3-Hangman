@@ -19,3 +19,7 @@ username_label.pack(pady=20)
 
 username_entry = tk.Entry(window, font=('Arial', 16))
 username_entry.pack()
+
+start_button = tk.Button(window, text="Start Game", command=start_game, font=('Arial', 16), bg="white")
+start_button.pack(pady=20)
+
