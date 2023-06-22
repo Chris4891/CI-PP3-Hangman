@@ -5,11 +5,10 @@ import math
 def load_words_from_txt_file():
     with open('words.txt', 'r') as file:
         words = file.read().splitlines()
-    return words    
+    return words
 
 def start_game():
     username = username_entry.get()
-
     if username:
         username_label.pack_forget()
         username_entry.pack_forget()
@@ -23,15 +22,16 @@ def start_game():
         guess_entry.pack()
         guess_button.pack()
         message_label.pack()
-
     else:
         message_label.config(text="Please enter your name.")
 
 def initialize_game():
     global guess_word, remaining_attempts, guessed_letters
+
     guess_word = random.choice(words)
     remaining_attempts = 6
     guessed_letters = set()
+
     update_word_display()
     update_image()
 
@@ -86,7 +86,6 @@ def end_game():
     game_over_window.geometry(f"{window_width}x{window_height}+{window_x}+{window_y}")
     game_over_window.mainloop()
 
-
 def restart_game():
     initialize_game()
     window.deiconify()
@@ -95,9 +94,12 @@ def restart_game():
     guess_entry.delete(0, tk.END)
     message_label.config(text="")
 
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
+
+words = load_words_from_txt_file()
 
 window.configure(bg="white")
 
