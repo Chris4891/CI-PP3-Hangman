@@ -62,6 +62,25 @@ def process_guess():
     else:
         message_label.config(text="Please enter a single letter.")
 
+def end_game():
+    window.withdraw()
+
+    game_over_window = tk.Toplevel()
+    game_over_window.title("Game Over")
+    game_over_window.configure(bg="red")
+
+    game_over_frame = tk.Frame(game_over_window, bg="red")
+    game_over_frame.pack(pady=20)
+
+    game_over_label = tk.Label(game_over_frame, text="Game Over", font=('Arial', 24), bg="red", fg="white")
+    game_over_label.pack(pady=20)
+
+    restart_button = tk.Button(game_over_frame, text="Restart Game", command=restart_game, font=('Arial', 16), bg="white")
+    restart_button.pack(pady=20)
+
+    game_over_window.geometry(f"{window_width}x{window_height}+{window_x}+{window_y}")
+    game_over_window.mainloop()
+
 # GUI
 window = tk.Tk()
 window.title("Hangman Game")
