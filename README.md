@@ -34,24 +34,24 @@ Clone this repository or download the source code files.
 The Hangman game provides an interactive and immersive experience for players. It allows users to engage in a challenging word guessing game and test their vocabulary skills. The game offers the following user experience:
 
 * Player Customization: Users can personalize their experience by entering their name before starting the game.
-    ![Responsive Screens](img/StartScreen.png)
+    ![Responsive Screens](imgs/StartScreen.png)
 * Random Word Selection: For each game session, a random word is chosen from the list provided to ensure a unique and unpredictable gaming experience.
-    ![Responsive Screens](img/userenterdname.png)
+    ![Responsive Screens](imgs/userenterdname.png)
 * Visual Feedback: The game shows a hangman image that gradually changes when a wrong guess is made, enhancing the gaming experience.
-    ![Responsive Screens](img/wrong5.png)
-    ![Responsive Screens](img/wrong4.png)
+    ![Responsive Screens](imgs/wrong5.png)
+    ![Responsive Screens](imgs/wrong4.png)
 
 * Presumed Mechanism: Players can enter individual letters as guesses, and the game checks the validity of their input, provides feedback on its correctness, and updates the word display accordingly.
 * Win/Loss Conditions: The game determines whether the player succeeds in guessing the whole word or exhausts attempts and sends the appropriate message announcing the result.
-    ![Responsive Screens](img/gameover.png)
-    ![Responsive Screens](img/win.png)
+    ![Responsive Screens](imgs/gameover.png)
+    ![Responsive Screens](imgs/win.png)
 
 * Same input as previous Check: if the user enters the same letter which was previously sucessfull the game displays
 the message that this letter was previously entered.
-    ![Responsive Screens](img/sameguess.png)
+    ![Responsive Screens](imgs/sameguess.png)
 
 * Restart Options: After finishing the game, the user can restart the game and play again without closing and reopening the application.
-    ![Responsive Screens](img/restartfeature.png)
+    ![Responsive Screens](imgs/restartfeature.png)
 
 ## Existing Features
 
