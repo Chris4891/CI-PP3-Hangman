@@ -47,7 +47,7 @@ def process_guess():
                 display_hangman()
     else:
         print(Fore.RED + "Please enter a single letter." + Style.RESET_ALL)
-        
+
 
 def display_hangman():
     stages = [
@@ -105,4 +105,9 @@ def display_hangman():
     print("\n" + stages[remaining_attempts - 1] + "\n")
 
 
-    
+def play_game():
+    print(Fore.GREEN + "Let's play Hangman!" + Style.RESET_ALL)
+    update_word_display()
+
+    while True:
+        process_guess()
