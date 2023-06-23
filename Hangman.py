@@ -1,14 +1,36 @@
+import os
 import random
 import colorama
 from colorama import Fore, Style
 
+
 colorama.init()
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def load_words_from_txt_file():
     with open('words.txt', 'r') as file:
         words = file.read().splitlines()
     return words
 
+def start_game():
+    clear_screen()
+    print(Fore.MAGENTA + "-------------------------------------------")
+    print("|                                         |")
+    print("|              Hangman Game               |")
+    print("|                                         |")
+    print(" -------------------------------------------" + Style.RESET_ALL)
+    print()
+
+    username = input(Fore.CYAN + "Enter your name: " + Style.RESET_ALL)
+    if username:
+        print(f"\n{Fore.GREEN}Welcome, {username}! Let's start the game." + Style.RESET_ALL)
+        words = load_words_from_txt_file()
+        initialize_game(words)
+        play_game()
+    else:
+        print("\nPlease enter your name.")
 
 def initialize_game(words):
     global guess_word, remaining_attempts, guessed_letters
@@ -20,6 +42,7 @@ def update_word_display():
     masked_word = ' '.join(
         [letter if letter in guessed_letters else '_' for letter in guess_word])
     print("Word:", Fore.YELLOW + masked_word + Style.RESET_ALL)
+
 
 def process_guess():
     global remaining_attempts
@@ -114,6 +137,7 @@ def play_game():
     while True:
         process_guess()
 
+
 def end_game():
     restart = input(Fore.CYAN + "Do you want to play again? (yes/no): " + Style.RESET_ALL)
 
@@ -129,3 +153,4 @@ words = load_words_from_txt_file()
 
 print(Fore.MAGENTA + "Hangman Game" + Style.RESET_ALL)
 
+start_game()
