@@ -9,7 +9,8 @@ To run the Hangman game.
 Make sure Python 3 is installed on your computer.
 Clone this repository or download the source code files.
 
-* follow these steps:
+### follow these steps:
+
 1. Run the game by executing the `hangman.py` file.
 2. Enter your name and start guessing the letters of the word.
 3. You have 6 attempts to guess the word correctly.
