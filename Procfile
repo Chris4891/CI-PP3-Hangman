@@ -1,1 +1,1 @@
-worker: python Hangman.py
+bot: python Hangman.py
