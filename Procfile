@@ -1,1 +1,1 @@
-bot: python Hangman.py
+web: node index.js
