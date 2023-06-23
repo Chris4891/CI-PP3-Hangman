@@ -20,3 +20,60 @@ def update_word_display():
     masked_word = ' '.join(
         [letter if letter in guessed_letters else '_' for letter in guess_word])
     print("Word:", Fore.YELLOW + masked_word + Style.RESET_ALL)
+
+
+
+def display_hangman():
+    stages = [
+        """
+            --------
+            |      |
+            |      O
+            |     \\|/
+            |      |
+            |     / \\
+        """, """
+            --------
+            |      |
+            |      O
+            |     \\|/
+            |      |
+            |     /
+        """, """
+            --------
+            |      |
+            |      O
+            |     \\|/
+            |      |
+            |
+        """, """
+            --------
+            |      |
+            |      O
+            |     \\|
+            |      |
+            |
+        """, """
+            --------
+            |      |
+            |      O
+            |      |
+            |      |
+            |
+        """, """
+            --------
+            |      |
+            |      O
+            |
+            |
+            |
+        """, """
+            --------
+            |      |
+            |
+            |
+            |
+            |
+        """
+    ]
+    print("\n" + stages[remaining_attempts - 1] + "\n")
