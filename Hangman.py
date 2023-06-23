@@ -35,12 +35,14 @@ def process_guess():
 
             if all(letter in guessed_letters for letter in guess_word):
                 print(Fore.GREEN + "Congratulations! You guessed the word!" + Style.RESET_ALL)
+                end_game()
         else:
             remaining_attempts -= 1
 
             if remaining_attempts == 0:
                 print(Fore.RED + "You ran out of attempts. Game over!" + Style.RESET_ALL)
                 print(f"The word was: {guess_word}")
+                end_game()
             else:
                 print(Fore.RED + "Incorrect guess. Try again." + Style.RESET_ALL)
                 print(f"Remaining attempts: {remaining_attempts}")
