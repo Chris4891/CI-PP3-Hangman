@@ -91,7 +91,7 @@ The following bugs were identified during testing:
 
 ## Deployment
 
-The Hangman game is deployed on HEROKU follow this link to play the game "LINK HERE AFTER DEPLOYMENT".
+The Hangman game is deployed on HEROKU follow this link to play the game https://cipp3hangman-fa778fd07d3a.herokuapp.com/.
 
 ## Credits
 
