@@ -111,3 +111,19 @@ def play_game():
 
     while True:
         process_guess()
+
+def end_game():
+    restart = input(Fore.CYAN + "Do you want to play again? (yes/no): " + Style.RESET_ALL)
+
+    if restart.lower() == 'yes':
+        initialize_game(words)  
+        play_game()
+    else:
+        print(Fore.YELLOW + "Thank you for playing Hangman!" + Style.RESET_ALL)
+
+
+
+words = load_words_from_txt_file()
+
+print(Fore.MAGENTA + "Hangman Game" + Style.RESET_ALL)
+
