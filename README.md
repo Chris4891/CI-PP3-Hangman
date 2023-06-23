@@ -82,7 +82,7 @@ The Hangman game has been tested and validated to ensure its functionality and c
 
 The following bugs were identified during testing:
 
-* Solved Bugs
+### Solved Bugs
 * Issue: None
 
 ### Remaining Bugs
