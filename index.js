@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  const python = spawn('python', ['hangman.py']);
+  const python = spawn('python', ['Hangman.py']);
 
   python.stdout.on('data', (data) => {
     console.log(data.toString());
