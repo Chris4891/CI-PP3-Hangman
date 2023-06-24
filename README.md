@@ -2,7 +2,7 @@
 
 A simple hangman game written in Python.Its a Python application that allows users to play the classic word guessing game. It offers an interactive and immersive experience where players can test their vocabulary skills by guessing letters and revealing hidden words.
 
-![Responsive Screens](imageresponsive.png)
+![Responsive Screens](imgs/imageresponsive.png)
 
 ## Instructions
 
