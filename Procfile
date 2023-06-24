@@ -1,1 +1,1 @@
-worker: python Hangman.py
+web: node index.js
